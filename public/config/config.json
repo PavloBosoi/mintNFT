@@ -1,0 +1,18 @@
+{
+  "CONTRACT_ADDRESS": "0x6ad51170ac47575a33244a03851facad37685e40",
+  "SCAN_LINK": "https://explorer.alt.technology?rpcUrl=https://marmaladef89ffe94-alt-producer-rpc.alt.technology",
+  "NETWORK": {
+    "NAME": "Marmalade",
+    "SYMBOL": "MARM",
+    "ID": 1000045
+  },
+  "NFT_NAME": "WouwNFT",
+  "SYMBOL": "WOUW",
+  "MAX_SUPPLY": 1111,
+  "WEI_COST": 1000000000000000000,
+  "DISPLAY_COST": 1,
+  "GAS_LIMIT": 3000000,
+  "MARKETPLACE": "",
+  "MARKETPLACE_LINK": "",
+  "SHOW_BACKGROUND": true
+}
