@@ -82,7 +82,7 @@ export const StyledImg = styled.img`
 `;
 
 export const StyledLink = styled.a`
-  color: var(--secondary);
+  color: var(--secondary-text);
   text-decoration: none;
 `;
 
@@ -135,7 +135,8 @@ function App() {
       .then((receipt) => {
         const nftId = +data.totalSupply + 1;
         setFeedback(
-          `Yes, you did it, the ${CONFIG.NFT_NAME} is yours! NFT ID: ${nftId}`
+          `Yes, you did it, the ${CONFIG.NFT_NAME} is yours! NFT ID: ${nftId}.
+          TxHash: ${receipt.transactionHash}`
         );
         setClaimingNft(false);
         dispatch(fetchData(blockchain.account));
@@ -207,6 +208,20 @@ function App() {
               width: "100%"
             }}
           >
+            <s.TextDescription
+              style={{
+                textAlign: "center",
+                width: "50%",
+                color: "var(--primary-text)",
+              }}
+            >
+              Welcome to the collection of World of Ukrainian Women! Created by @BosPashka and Illustrated by @Nft_artBo(Twitter). This collection was created in Ukraine under the sounds of air raid sirens in order for them to stop. We want to change the world into a better place. This collection is a small help to the Ukrainian people. Mint it to be a part of history.
+              <s.SpacerSmall />
+              Original collection is here: {'\u00A0'}
+              <StyledLink target={"_blank"} href={"https://opensea.io/collection/world-of-ukrainian-women"}>
+                Opensea
+              </StyledLink>
+            </s.TextDescription>
             <s.TextTitle
               style={{
                 textAlign: "center",
@@ -222,7 +237,7 @@ function App() {
                 textAlign: "center",
                 color: "var(--primary-text)",
               }}
-            >
+            >Explorer: {'\u00A0'}
               <StyledLink target={"_blank"} href={CONFIG.SCAN_LINK}>
                 {truncate(CONFIG.CONTRACT_ADDRESS, 15)}
               </StyledLink>
@@ -303,7 +318,7 @@ function App() {
                     <s.SpacerMedium />
                     <s.Container ai={"center"} jc={"center"} fd={"row"}>
                       <StyledRoundButton
-                        style={{ lineHeight: 0.4 }}
+                        style={{ lineHeight: 0.4, color: "var(--secondary-text)" }}
                         disabled={claimingNft ? 1 : 0}
                         onClick={(e) => {
                           e.preventDefault();
@@ -323,6 +338,7 @@ function App() {
                       </s.TextDescription>
                       <s.SpacerMedium />
                       <StyledRoundButton
+                      style={{ lineHeight: 0.4, color: "var(--secondary-text)" }}
                         disabled={claimingNft ? 1 : 0}
                         onClick={(e) => {
                           e.preventDefault();
