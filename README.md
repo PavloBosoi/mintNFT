@@ -1,2 +1,2 @@
 # mintNFT
-Solidity smart contract for mint nft
+Project for create a mint NFT Website.
